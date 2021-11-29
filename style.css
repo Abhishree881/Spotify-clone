@@ -11,6 +11,6 @@
 .conNav
 .content{
     width: 100%;
-    height: 100%;
-    background: linear-gradient(145deg,rgb(139, 133, 133), black);
+    height: 100vh;
+    background: linear-gradient(rgb(20,20,20), black);
 }
