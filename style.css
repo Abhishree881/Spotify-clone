@@ -9,7 +9,10 @@ body{
     display: flex;
 }
 .nav div{
-    padding: 20px;
+    padding: 10px;
+    margin: 10px;
+    color : lightgray;
+    cursor: pointer;
 }
 .contentNav{
     display: flex;
@@ -18,6 +21,7 @@ body{
 .nav{
     background: black;
     height: 100vh;
+    flex-basis: 15%;
 }
 .contentNav div{
     background-color: black;
