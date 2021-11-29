@@ -8,5 +8,5 @@
 .content{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(white, black);
+    background: linear-gradient(rgb(70, 69, 69), black);
 }
