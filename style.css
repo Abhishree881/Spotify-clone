@@ -1,16 +1,33 @@
-*{
+body{
     margin: 0;
     padding: 0;
+    color: white;
+    height: 100%;
+    width: 100%;
 }
 .main{
     display: flex;
 }
-.mainNav{
-    padding: 10px;
+.nav div{
+    padding: 20px;
 }
-.conNav
+.contentNav{
+    display: flex;
+    float : right;
+}
+.nav{
+    background: black;
+    height: 100vh;
+}
+.contentNav div{
+    background-color: black;
+    padding: 10px 30px 10px 30px;
+    margin:15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
 .content{
     width: 100%;
     height: 100%;
-    background: linear-gradient(145deg,rgb(139, 133, 133), black);
+    background: #2f2f30;
 }
