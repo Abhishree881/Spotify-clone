@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 50px;
+    /* background: linear-gradient(to top left, #000000 0%, #a9a9a9 175%); */
+    background-color: rgb(20, 20, 20);
+}
+
+.container{
+    /* height: 35vh; */
+    position: relative;
+    width: 30vh;
+    height: 42vh;
+    background-color: rgb(32, 29, 29);
+    padding: 5px;
+    border-radius: 5px;
+}
+#i001{
+    position: relative;
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    z-index: 1;
+}
+#i002{
+    /* visibility: hidden; */
+    top: 60%;
+    left: 71%;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    z-index: 3;
+}
+.image{   
+    display: flex;
+    padding:10px;
+}
+.artist{
+    position: relative;
+    color: blanchedalmond;
+    font-size: 1.5em;
+    font-weight: 800;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.other{
+    position: relative;
+    padding: 10px;
+    padding-top: 0px;
+    color: rgb(92, 88, 83);
+}

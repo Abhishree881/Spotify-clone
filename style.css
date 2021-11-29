@@ -28,6 +28,6 @@ body{
 }
 .content{
     width: 100%;
-    height: 100%;
-    background: #2f2f30;
+    height: 100vh;
+    background: linear-gradient(rgb(20,20,20), black);
 }
