@@ -3,10 +3,14 @@
     padding: 0;
 }
 .main{
-    display: grid;
+    display: flex;
 }
+.mainNav{
+    padding: 10px;
+}
+.conNav
 .content{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: linear-gradient(145deg,rgb(139, 133, 133), black);
 }
