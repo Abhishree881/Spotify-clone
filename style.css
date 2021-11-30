@@ -18,6 +18,17 @@ body{
     color : lightgray;
     cursor: pointer;
 }
+
+ ul li {
+    color:rgba(245, 245, 245, 0.746);
+    list-style-type: none;
+}
+
+ul li:hover {
+    color:white;
+}
+
+
 .content{
     width: 65%;
     height: 100%;
