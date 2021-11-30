@@ -17,7 +17,6 @@ body{
     color : lightgray;
     cursor: pointer;
 }
-<<<<<<< HEAD
 
  ul li {
     color:rgba(245, 245, 245, 0.746);
@@ -29,20 +28,6 @@ ul li:hover {
 }
 
 
-=======
-.navdiv1{
-    position: sticky;
-    top: 5%;
-}
-.navdiv2{
-    position: sticky;
-    top: 15%;
-}
-.navdiv3{
-    position: sticky;
-    top: 25%;
-}
->>>>>>> 46116d1a28033a646ace2efd0ee175d830b32d33
 .content{
     width: 65%;
     height: 100%;
