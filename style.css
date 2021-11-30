@@ -9,51 +9,60 @@ body{
 }
 .nav{
     background: black;
-    height: 200vh;
     width: 18%;
 }
-.nav div{
+.navdiv1,.navdiv2,.navdiv3{
     padding: 10px;
     margin: 10px;
     color : lightgray;
     cursor: pointer;
 }
+.navdiv1{
+    position: sticky;
+    top: 5%;
+}
+.navdiv2{
+    position: sticky;
+    top: 15%;
+}
+.navdiv3{
+    position: sticky;
+    top: 25%;
+}
 .content{
     width: 65%;
     height: 100%;
-    padding: 20px;
     background: linear-gradient(rgb(20,20,20), black);
-    display: grid;
 }
 .contentNav{
     display: flex;
     width: 100%;
     opacity: 0.8;
-    position: fixed;
+    padding: 0px;
+    position: sticky;
+    top : 0%;
+    background-color: rgb(20,20,20);
 }
 .div1,.div2{
-    right : 30%;
     background-color: black;
     padding: 10px 30px 10px 30px;
     margin:15px;
+    border: solid black;
     border-radius: 25px;
     cursor: pointer;
     font-weight: bold;
     transition: 0.1s;
 }
 .div1:hover{
-    background-color: black;
-    padding: 10px 30px 10px 30px;
-    margin:15px;
     border: solid white;
     opacity: 1.0;
 }
 .div2:hover{
-    background-color: black;
-    padding: 10px 30px 10px 30px;
-    margin:15px;
     border: solid white;
     opacity: 1.0;
+}
+.maincontent{
+    padding: 20px;
 }
 .container{
     top : 30%;
@@ -84,7 +93,7 @@ body{
     background-repeat: no-repeat;
     background-size: auto;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 50px;
     z-index: 3;
 }
 .image{   
@@ -141,7 +150,12 @@ body{
     margin-top: 20px;
     font-weight: bolder;
     color: wheat;
+    border: solid rgb(32, 29, 29);
+    transition: 0.1s;
 }
 .fa-facebook {
     color: wheat;
-  }
+}
+.button:hover{
+    border: solid white;
+}
