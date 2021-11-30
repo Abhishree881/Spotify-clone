@@ -11,57 +11,82 @@ body{
     background: black;
     width: 18%;
 }
-.navdiv1,.navdiv2,.navdiv3{
-    padding: 10px;
-    margin: 10px;
-    color : lightgray;
-    cursor: pointer;
+.fa-spotify{
+    height: 3%;
+    position: sticky;
+    top:1%;
 }
-
- ul li {
+.nav1{
+    top: 17%;
+}
+.nav2{
+    top: 22%;
+}
+.nav3{
+    top: 27%;
+}
+.nav4{
+    top: 37%;
+}
+.nav5{
+    top: 42%;
+}
+ul li {
     color:rgba(245, 245, 245, 0.746);
     list-style-type: none;
+    cursor: pointer;
+    position: fixed;
 }
-
 ul li:hover {
     color:white;
 }
-
-
+.row{
+    display: flex;
+    margin:20px;
+}
 .content{
     width: 65%;
     height: 100%;
     background: linear-gradient(rgb(20,20,20), black);
 }
 .contentNav{
-    display: flex;
     width: 100%;
-    opacity: 0.8;
+    height: 10%;
     padding: 0px;
-    position: sticky;
+    position: fixed;
     top : 0%;
     background-color: rgb(20,20,20);
+    z-index: 5;
 }
 .div1,.div2{
+    position: fixed;
     background-color: black;
     padding: 10px 30px 10px 30px;
-    margin:15px;
+    margin:10px 15px 10px 15px;
     border: solid black;
     border-radius: 25px;
     cursor: pointer;
     font-weight: bold;
     transition: 0.1s;
+    z-index: 6;
+}
+.div1{
+    right:30%;
+    top : 0%;
+}
+.div2{
+    right: 20%;
+    top: 0%;
 }
 .div1:hover{
     border: solid white;
-    opacity: 1.0;
 }
 .div2:hover{
     border: solid white;
-    opacity: 1.0;
 }
 .maincontent{
     padding: 20px;
+    z-index: 0;
 }
 .container{
     top : 30%;
@@ -118,6 +143,7 @@ ul li:hover {
     background-color: rgb(32, 29, 29);
     width:17%;
     padding: 20px;
+    z-index: 7;
 }
 .login h3{
     position: sticky;
