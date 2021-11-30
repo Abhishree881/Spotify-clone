@@ -6,3 +6,4 @@
 #### Problem Statement: This repo is aimed to build a clone of the web version of popular music app Spotify.
 #### Tech Stack: HTML, CSS, JavaScript (Primarily for Frontend);
 #### Contributions are Welcome  
+#### Hello!!
