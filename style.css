@@ -1,14 +1,35 @@
-*{
+body{
     margin: 0;
     padding: 0;
+    color: white;
+    height: 100%;
+    width: 100%;
 }
 .main{
     display: flex;
 }
-.mainNav{
+.nav div{
     padding: 10px;
+    margin: 10px;
+    color : lightgray;
+    cursor: pointer;
 }
-.conNav
+.contentNav{
+    display: flex;
+    float : right;
+}
+.nav{
+    background: black;
+    height: 100vh;
+    flex-basis: 15%;
+}
+.contentNav div{
+    background-color: black;
+    padding: 10px 30px 10px 30px;
+    margin:15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
 .content{
     width: 100%;
     height: 100vh;
