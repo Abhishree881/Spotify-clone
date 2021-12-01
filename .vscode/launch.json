@@ -5,7 +5,9 @@
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
-      "args": [],
+      "args": [
+        ""
+      ],
       "stopAtEntry": false,
       "cwd": "c:/Users/lenovo/Desktop/git/Spotify-clone",
       "environment": [],

@@ -1,7 +1,8 @@
 body{
     margin: 0;
     padding: 0;
-    color: white;
+    color: rgba(245, 245, 245, 0.746);
+    font-weight: bold;
     font-family: 'proxima-nova', sans-serif;
 }
 .main{
@@ -9,27 +10,32 @@ body{
 }
 .nav{
     background: black;
-    width: 18%;
+    width: 16%;
 }
 .fa-spotify{
     height: 3%;
     position: sticky;
-    top:1%;
+    top:3%;
+}
+font{
+    color: rgba(245, 245, 245, 0.746);
+    font-weight: bold;
+    position: fixed;
 }
 .nav1{
-    top: 17%;
+    top: 19%;
 }
 .nav2{
-    top: 22%;
+    top: 24%;
 }
 .nav3{
-    top: 27%;
+    top: 29%;
 }
 .nav4{
-    top: 37%;
+    top: 39%;
 }
 .nav5{
-    top: 42%;
+    top: 44%;
 }
 ul li {
     color:rgba(245, 245, 245, 0.746);
@@ -41,7 +47,7 @@ ul li:hover {
     color:white;
 }
 .content{
-    width: 65%;
+    width: 66%;
     height: 100%;
     background: linear-gradient(rgb(20,20,20), black);
 }
@@ -144,7 +150,7 @@ ul li:hover {
 }
 .login{
     background-color: rgb(32, 29, 29);
-    width:17%;
+    width:18%;
     padding: 20px;
     z-index: 7;
 }
