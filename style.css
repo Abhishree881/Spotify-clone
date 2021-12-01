@@ -37,13 +37,13 @@ font{
 .nav5{
     top: 44%;
 }
-ul li {
+.ul div{
     color:rgba(245, 245, 245, 0.746);
-    list-style-type: none;
     cursor: pointer;
     position: fixed;
+    margin-left: 20px;
 }
-ul li:hover {
+.ul div:hover {
     color:white;
 }
 .content{
@@ -52,7 +52,7 @@ ul li:hover {
     background: linear-gradient(rgb(20,20,20), black);
 }
 .contentNav{
-    width: 100%;
+    width: 66%;
     height: 9%;
     padding: 0px;
     position: fixed;
@@ -95,43 +95,54 @@ ul li:hover {
     display: flex;
 }
 .container{
-    top : 30%;
-    position: relative;
     cursor: pointer;
+    max-width: 28vh;
     background-color: rgb(32, 29, 29);
     padding: 5px;
     border-radius: 5px;
-    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin:10px;
+}
+.img2{
+    transition: .4s;
 }
 .container:hover{
     background-color: rgb(32, 39, 39);
 }
-#i001{
-    position: relative;
+.i001{
     width: 25vh;
     height: 25vh;
+    padding: 10px;
     background-repeat: no-repeat;
     background-size: auto;
-    overflow: hidden;
     border-radius: 5px;
-    z-index: 1;
 }
-#i002{
-    /* visibility: hidden; */
-    top: 50%;
-    left: 71%;
-    position: absolute;
+.i002{
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-size: auto;
-    overflow: hidden;
-    border-radius: 80%;
-    z-index: 2;
+    border-radius: 50px;
+    border: solid green;
 }
 .image{   
-    display: flex;
-    padding:10px;
+    position: relative;
+}
+.image .i001{
+    display: block;
+}
+.image .img2{
+    opacity: 0;
+    position: absolute; z-index: 1;
+    top: 70%;
+    left: 70%;
+}
+.img2{
+    position: absolute; z-index: 2;
+}
+.container:hover .img2{
+    opacity: 1;
 }
 .artist{
     position: relative;

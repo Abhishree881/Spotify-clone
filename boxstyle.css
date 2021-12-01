@@ -17,7 +17,7 @@ body{
     flex-wrap: wrap;
     list-style: none;
 }
-.playWrapper{
+.playWrapper{ 
     transition: .4s;
 }
 #i001{
@@ -51,7 +51,7 @@ body{
 .playWrapper .playBtn {
     position: absolute; z-index: 2;
 }  
-.thumb .container:hover .playWrapper {
+.thumb .containerOP:hover .playWrapper {
     opacity: 1;
 }
 .thumb:hover{
