@@ -88,14 +88,11 @@ body{
 }
 .advt{
     display: flex;
-    margin-top: 5%;
-}
-.img{
-    padding: 1%;
-    width: 100%;
+    margin: 7% 1.5% 1% 1.5% ;
 }
 .advtimg{
     cursor: pointer;
+    width: 100%;
 }
 .row{
     margin-top: 10%;
