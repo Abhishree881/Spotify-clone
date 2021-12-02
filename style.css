@@ -39,20 +39,18 @@ body{
     color:rgba(245, 245, 245, 0.746);
     cursor: pointer;
     position: fixed;
-    margin-left: 20px;
+    margin-left: 2%;
 }
 .ul div:hover {
     color:white;
 }
 .content{
     width: 64.6%;
-    height: 100%;
     background: linear-gradient(rgb(20,20,20), black);
 }
 .contentNav{
-    width: 64.6%;
-    height: 9%;
-    padding: 0px;
+    width: 100%;
+    height: 65px;
     position: fixed;
     top : 0%;
     background-color: rgb(20,20,20);
@@ -61,8 +59,8 @@ body{
 .div1,.div2{
     position: fixed;
     background-color: black;
-    padding: 7px 30px 7px 30px;
-    margin:10px 20px 10px 20px;
+    padding: .5% 3% .5% 3%;
+    margin:1% 2% 1% 2%;
     border: solid black;
     border-radius: 25px;
     cursor: pointer;
@@ -71,7 +69,7 @@ body{
     z-index: 6;
 }
 .div1{
-    right:30%;
+    right:32%;
     top : 0%;
 }
 .div2{
@@ -85,7 +83,7 @@ body{
     border: solid white;
 }
 .maincontent{
-    padding: 20px;
+    padding: 1%;
     z-index: 0;
 }
 .advt{
@@ -93,7 +91,8 @@ body{
     margin-top: 5%;
 }
 .img{
-    padding: 10px;
+    padding: 1%;
+    width: 100%;
 }
 .advtimg{
     cursor: pointer;
@@ -104,13 +103,13 @@ body{
 }
 .container{
     cursor: pointer;
-    max-width: 28vh;
+    height: 240px;
     background-color: rgb(32, 29, 29);
-    padding: 5px;
+    padding: .5%;
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
-    margin:10px;
+    margin:1%;
 }
 .img2{
     transition: .4s;
@@ -118,10 +117,11 @@ body{
 .container:hover{
     background-color: rgb(32, 39, 39);
 }
-.i001{
-    width: 25vh;
-    height: 25vh;
-    padding: 10px;
+.image .i001{
+    width: 92%;
+    height: 100%;
+    padding: 4% 4% 0% 4%;
+    margin-bottom: 0;
     background-repeat: no-repeat;
     background-size: auto;
     border-radius: 5px;
@@ -134,6 +134,7 @@ body{
 }
 .image{   
     position: relative;
+    height: 150px;
 }
 .image .i001{
     display: block;
@@ -152,17 +153,19 @@ body{
     top: 70%;
 }
 .artist{
+    margin-top: 0;
     position: relative;
     color: blanchedalmond;
     font-size: 1em;
     font-weight: 800;
-    padding: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-top: 2%;
+    padding: 6%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 .other{
     position: relative;
-    padding: 10px;
+    padding: 6%;
     padding-top: 0px;
     color: rgb(92, 88, 83);
 }
