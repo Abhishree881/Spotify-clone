@@ -88,8 +88,18 @@ body{
     padding: 20px;
     z-index: 0;
 }
+.advt{
+    display: flex;
+    margin-top: 5%;
+}
+.img{
+    padding: 10px;
+}
+.advtimg{
+    cursor: pointer;
+}
 .row{
-    margin-top: 20%;
+    margin-top: 10%;
     display: flex;
 }
 .container{
@@ -121,8 +131,6 @@ body{
     height: 30px;
     background-repeat: no-repeat;
     background-size: auto;
-    border-radius: 50px;
-    border: solid green;
 }
 .image{   
     position: relative;
