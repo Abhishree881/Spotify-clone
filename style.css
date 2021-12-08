@@ -7,6 +7,7 @@ body{
 }
 .main{
     display: flex;
+    
 }
 .nav{
     background: black;
@@ -225,3 +226,21 @@ header{
 .button:hover{
     border: solid white;
 }
+
+  @media (max-width:850px){
+      .ul span{
+          display:none;
+      }
+      .ul i{
+        justify-content: space-around;
+        text-align:center;
+        margin-left:0;   
+      }
+      .font span{
+        display:none;
+    }
+    .contentNav{
+        justify-content:space-evenly;
+
+    }
+  }
