@@ -70,7 +70,7 @@ body{
     z-index: 6;
 }
 .div1{
-    right:32%;
+    right:34%;
     top : 0%;
 }
 .div2{
@@ -96,7 +96,9 @@ body{
     cursor: pointer;
     width: 100%;
 }
-
+.img{
+    width: 100%;
+}
 header{
     color:white;
 }
@@ -114,7 +116,7 @@ header{
 }
 .container{
     cursor: pointer;
-    height: 240px;
+    height: 250px;
     background-color: rgb(32, 29, 29);
     padding: .5%;
     border-radius: 5px;
@@ -129,13 +131,16 @@ header{
     background-color: rgb(32, 39, 39);
 }
 .image .i001{
-    width: 92%;
+    width: 90%;
     height: 100%;
-    padding: 4% 4% 0% 4%;
+    padding: 5% 5% 0% 5%;
     margin-bottom: 0;
     background-repeat: no-repeat;
     background-size: auto;
     border-radius: 5px;
+}
+.image{
+    width:100%;
 }
 .i002{
     width: 30px;
@@ -164,13 +169,13 @@ header{
     top: 70%;
 }
 .artist{
-    margin-top: 0;
     position: relative;
     color: blanchedalmond;
     font-size: 1em;
     font-weight: 800;
     margin-top: 2%;
-    padding: 6%;
+    width: 100%;
+    text-align: center;
     padding-top: 1%;
     padding-bottom: 1%;
 }
@@ -179,6 +184,8 @@ header{
     padding: 6%;
     padding-top: 0px;
     color: rgb(92, 88, 83);
+    width: 100%;
+    text-align: center;
 }
 .login{
     background-color: rgb(32, 29, 29);
@@ -227,20 +234,19 @@ header{
     border: solid white;
 }
 
-  @media (max-width:850px){
-      .ul span{
+@media (max-width:850px){
+    .ul span{
           display:none;
-      }
-      .ul i{
+    }
+    .ul i{
         justify-content: space-around;
         text-align:center;
         margin-left:0;   
-      }
-      .font span{
+    }
+    .font span{
         display:none;
     }
     .contentNav{
         justify-content:space-evenly;
-
     }
-  }
+}
