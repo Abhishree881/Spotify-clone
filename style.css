@@ -269,16 +269,29 @@ header{
     flex-direction: row;
 }
 .icons i{
-    margin: 10px 14px 10px 14px;
+    margin: 10px;
     cursor: pointer;
 }
-#myProgressBar{
+input[type=range]{
     width: 35vw;
     height: 4px;
     border-radius: 50px;
-    cursor: pointer;
     margin-bottom: 1% ;
+    cursor: pointer;
+}
+.slider{
+    cursor: pointer;
 }
 .play{
     color: whitesmoke;
 }
+input[type=range]::-webkit-slider-runnable-track {
+    display: block;
+}
+input[type=range]::-webkit-slider-thumb{
+    opacity: 0;
+}
+.slider:hover input[type=range]::-webkit-slider-thumb{
+    opacity: 1;
+}
+
