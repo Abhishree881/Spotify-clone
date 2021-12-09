@@ -252,22 +252,33 @@ header{
 }
 .bottom{
     position: sticky;
-    height: 130px;
-    background-color: black;
-    color: white;
+    height: 70px;
+    background-color: rgb(20,20,20);
+    color: rgba(245, 245, 245, 0.746);
     bottom: 0;
+    z-index: 11;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 11;
 }
 .icons{
-    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 .icons i{
+    margin: 10px 14px 10px 14px;
     cursor: pointer;
 }
 #myProgressBar{
-    width: 80vw;
+    width: 35vw;
+    height: 4px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 1% ;
+}
+.play{
+    color: whitesmoke;
 }
