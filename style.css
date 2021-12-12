@@ -53,14 +53,14 @@ body{
 }
 .content{
     width: 66%;
-    background: linear-gradient(rgb(20,20,20), black);
+    background: linear-gradient(rgb(18,18,18), black);
 }
 .contentNav{
     width: inherit;
     height: 65px;
     position: fixed;
     top : 0%;
-    background-color: rgb(20,20,20);
+    background-color: rgb(18,18,18);
     z-index: 5;
 }
 .div1,.div2{
@@ -126,7 +126,7 @@ body{
     width: 100%;
 }
 .topcontainer:hover{
-    background-color: rgb(48, 49, 48);
+    background-color: rgb(42, 42, 42);
 }
 .topimg1{
     padding: 0;;
@@ -168,7 +168,7 @@ header{
 .container{
     cursor: pointer;
     height: 250px;
-    background-color: rgb(32, 29, 29);
+    background-color: rgb(24, 24, 24);
     padding: .5%;
     border-radius: 5px;
     display: flex;
@@ -324,7 +324,7 @@ header{
 .bottom{
     position: sticky;
     height: 70px;
-    background-color: rgb(20,20,20);
+    background-color: rgb(24,24,24);
     color: rgba(245, 245, 245, 0.746);
     bottom: 0;
     z-index: 11;
