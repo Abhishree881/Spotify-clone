@@ -305,7 +305,14 @@ header{
 .button:hover{
     border: solid white;
 }
-
+.song{
+    top : 60%;
+    position: sticky;
+}
+.song img{
+    height: 3.5%;
+    width:inherit;
+}
 @media (max-width:1150px){
     .ul span{
           display:none;
@@ -324,6 +331,12 @@ header{
     }
     .content{
         width:76%;
+    }
+    .playlist span{
+        display: none;
+    }
+    .playlist{
+        left:.5%;
     }
 }
 .bottom{
@@ -369,5 +382,19 @@ input[type=range]::-webkit-slider-thumb{
 }
 .slider:hover input[type=range]::-webkit-slider-thumb{
     opacity: 1;
+}
+.songname{
+    position: absolute;
+    right:7%;
+    color: white;
+}
+.playlist{
+    position: absolute;
+    left :2%;
+    color: lightgray;
+    cursor: pointer;
+}
+.playlist:hover{
+    color: white;
 }
 
