@@ -1,4 +1,6 @@
 var count=0;
+const top_row_1 = document.getElementById("toprow-1");
+const top_row_2 = document.getElementById("toprow-2");
 const row_1 = document.getElementById("row-1");
 const row_2 = document.getElementById("row-2");
 const row_3 = document.getElementById("row-3");
@@ -9,6 +11,26 @@ const row_7 = document.getElementById("row-7");
 const row_8 = document.getElementById("row-8");
 const row_9 = document.getElementById("row-9");
 const row_10 = document.getElementById("row-10");
+function createTopNew(row)
+{
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('topcontainer')
+    newDiv.innerHTML = `<div class="topimg1">
+                            <img src="https://rfmsomnii.com/wp-content/uploads/2020/02/Optimized-AW_AVIATION_11-CLEAN.jpg" class="topi001">
+                        </div>
+                        <div class="top artist">
+                            Alan Walker
+                        </div>
+                        <div class="topimg2">
+                            <img src="play.png" class="topi002">
+                        </div>`
+    row.appendChild(newDiv);
+    count++;
+    if (count<2)
+    {
+        createTopNew(row);
+    }
+}
 function createNew(row)
 {
     const newDiv = document.createElement('div');
@@ -34,6 +56,10 @@ function createNew(row)
         createNew(row);
     }
 }
+createTopNew(top_row_1);
+count=0;
+createTopNew(top_row_2);
+count=0;
 createNew(row_1);
 count=0;
 createNew(row_2);
