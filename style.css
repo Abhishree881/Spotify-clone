@@ -306,7 +306,7 @@ header{
     border: solid white;
 }
 .song{
-    top : 70%;
+    top : 60%;
     position: sticky;
     display: flex;
     justify-content: center;
