@@ -52,11 +52,11 @@ body{
     color:white;
 }
 .content{
-    width: 64.6%;
+    width: 66%;
     background: linear-gradient(rgb(20,20,20), black);
 }
 .contentNav{
-    width: 100%;
+    width: inherit;
     height: 65px;
     position: fixed;
     top : 0%;
@@ -64,7 +64,7 @@ body{
     z-index: 5;
 }
 .div1,.div2{
-    position: fixed;
+    position: absolute;
     background-color: black;
     padding: .5% 3% .5% 3%;
     margin:1% 2% 1% 2%;
@@ -76,11 +76,11 @@ body{
     z-index: 6;
 }
 .div1{
-    right:34%;
+    right:22%;
     top : 0%;
 }
 .div2{
-    right: 20%;
+    right: 5%;
     top: 0%;
 }
 .div1:hover{
