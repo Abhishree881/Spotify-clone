@@ -16,7 +16,7 @@ function createTopNew(row)
     const newDiv = document.createElement('div');
     newDiv.classList.add('topcontainer')
     newDiv.innerHTML = `<div class="topimg1">
-                            <img src="https://rfmsomnii.com/wp-content/uploads/2020/02/Optimized-AW_AVIATION_11-CLEAN.jpg" class="topi001">
+                            <img src="images/Faded.jpg" class="topi001">
                         </div>
                         <div class="top artist">
                             Alan Walker

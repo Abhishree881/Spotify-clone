@@ -28,25 +28,26 @@ body{
     top:3%;
 }
 .nav1{
-    top: 19%;
+    top: 15%;
 }
 .nav2{
-    top: 24%;
+    top: 20%;
 }
 .nav3{
-    top: 29%;
+    top: 25%;
 }
 .nav4{
-    top: 39%;
+    top: 35%;
 }
 .nav5{
-    top: 44%;
+    top: 40%;
 }
 .ul div{
     color:rgba(245, 245, 245, 0.746);
     cursor: pointer;
     position: fixed;
     margin-left: 2%;
+    width: fit-content;
 }
 .ul div:hover {
     color:white;
@@ -309,16 +310,14 @@ header{
     .ul span{
           display:none;
     }
-    .ul i{
-        justify-content: space-around;
-        text-align:center;
-        margin-left:0;   
+    .font{
+        margin-left:5%;  
+    }
+    .ul div{
+        margin-left:7%;   
     }
     .font span{
         display:none;
-    }
-    .contentNav{
-        justify-content:space-evenly;
     }
 }
 .bottom{
