@@ -95,7 +95,7 @@ body{
 }
 .advt{
     display: flex;
-    margin: 7% 1.5% 1% 1.5% ;
+    margin: 8% 1.5% 1% 1.5% ;
     padding-bottom: 50px;
 }
 .advtimg{
@@ -239,35 +239,55 @@ header{
     text-align: center;
 }
 .login{
-    background-color: rgb(32, 29, 29);
+    background-color: rgb(0, 0, 0);
     width:18%;
     padding: 20px;
     z-index: 7;
 }
 .login h3{
-    position: sticky;
-    top:7%;
+    position: fixed;
+    top:2%;
+    color: white;
+    font-weight: bold;
     font-size: 17px;
-}
-.login small{
-    color: lightgray;
-    position: sticky;
-    top:30%;
-    font-size: 11px;
 }
 .login p{
     color: lightgray;
     font-size: 13px;
-    position: sticky;
-    top:13%;
+    position: fixed;
+    padding-right: 1%;
+    top:11%;
+    margin-bottom: 10%;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+#ic1{
+    top : 22%;
+}
+#ic2{
+    top:31%;
+}
+#ic3{
+    top:40%
+}
+.material-icons{
+    padding: 5%;
+    margin-top: 2%;
+}
+.icon img{
+    margin-left: 7%;
 }
 .button{
     position: sticky;
-    top: 21%;
+    top: 50%;
     background: linear-gradient(to top, #0066ff 0%, #66ccff 100%);
     border-radius: 19px;
     color: white;
     padding: 10px 7px 10px 7px;
+    margin:12%;
     text-align: center;
     font-size: 12px;
     cursor: pointer;
