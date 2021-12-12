@@ -16,6 +16,9 @@ body{
 .font{
     color: rgba(245, 245, 245, 0.746);
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
 }
 .fa-spotify{
@@ -149,7 +152,7 @@ header{
     margin-top: 5%;
     color:white;
 }
-.row{
+#row-1,#row-2,#row-3,#row-4,#row-5,#row-6,#row-7,#row-8,#row-9,#row-10{
     margin-top: 10%;
     display: flex;
     padding-bottom:50px;
