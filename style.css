@@ -21,6 +21,9 @@ body{
     align-items: center;
     position: fixed;
 }
+.span{
+    font-size: x-large;
+}
 .fa-spotify{
     top:3%;
 }
