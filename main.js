@@ -115,9 +115,6 @@ const vol = document.getElementById('volume');
 
 cover.style = "opacity: 0;";
 song_name.style = "opacity: 0;";
-currTime.style = "opacity: 0;";
-durTime.style = "opacity: 0;";
-progressContainer.style = "opacity : 0"
 
 //----------------------------------------------------------------
 
@@ -150,9 +147,6 @@ function playSong(song) {
 
     cover.style = "opacity: 1;";
     song_name.style = "opacity: 1;";
-    currTime.style = "opacity: 1;";
-    durTime.style = "opacity: 1;";
-    progressContainer.style = "opacity : 1"
 
     audio.play();
 }

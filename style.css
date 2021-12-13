@@ -374,6 +374,18 @@ header{
     padding: 5px;
     font-size: 12px;
 }
+.vol{
+    position: absolute;
+    height: 4px;
+    left: 1%;
+    cursor: pointer;
+}
+.vol::-webkit-slider-thumb{
+    opacity: 0;
+}
+.vol:hover::-webkit-slider-thumb{
+    opacity: 1;
+}
 @media (max-width:1150px){
     .ul span{
           display:none;
@@ -399,8 +411,4 @@ header{
     .playlist{
         margin-left:.5%;
     }
-}
-.vol{
-    height: 4px;
-    margin-left: 50px;
 }
