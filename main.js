@@ -11,7 +11,7 @@ const row_7 = document.getElementById("row-7");
 const row_8 = document.getElementById("row-8");
 const row_9 = document.getElementById("row-9");
 const row_10 = document.getElementById("row-10");
-
+//-----------------------------------------------------------
 function createTopNew(row)
 {
     const newDiv = document.createElement('div');
@@ -32,6 +32,7 @@ function createTopNew(row)
         createTopNew(row);
     }
 }
+//-----------------------------------------------------------------
 function createNew(row)
 {
     const newDiv = document.createElement('div');
@@ -54,6 +55,7 @@ function createNew(row)
         createNew(row);
     }
 }
+// --------------------------------------------------
 createTopNew(top_row_1);
 count=0;
 createTopNew(top_row_2);
@@ -77,17 +79,21 @@ count=0;
 createNew(row_9);
 count=0;
 createNew(row_10);
+//------------------------------------------------------
 
+// Song Ids 
 const Ids = ['imgbtn11','imgbtn12','imgbtn13','imgbtn14'];
 // Song titles
 const songs = ['Faded','On My Way','Darkside','The Spectre'];
 
+// Changing the tiles
 for(let i=0;i<4;i++)
 {
   row_1.childNodes[i].setAttribute("id",Ids[i]);
   row_1.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i]}.jpg`);
   row_1.children[i].children[1].innerHTML = songs[i];
 }
+//--------------------------------------------------------------
 
 const musicContainer = document.getElementById('bottom');
 const playBtn = document.getElementById('playsong');
@@ -174,68 +180,6 @@ function prevSong() {
     audio.currentTime = (clickX / width) * duration;
   }
   
-//   //get duration & currentTime for Time of song
-//   function DurTime (e) {
-//       const {duration,currentTime} = e.srcElement;
-//       var sec;
-//       var sec_d;
-  
-//       // define minutes currentTime
-//       let min = (currentTime==null)? 0:
-//        Math.floor(currentTime/60);
-//        min = min <10 ? '0'+min:min;
-  
-//       // define seconds currentTime
-//       function get_sec (x) {
-//           if(Math.floor(x) >= 60){
-              
-//               for (var i = 1; i<=60; i++){
-//                   if(Math.floor(x)>=(60*i) && Math.floor(x)<(60*(i+1))) {
-//                       sec = Math.floor(x) - (60*i);
-//                       sec = sec <10 ? '0'+sec:sec;
-//                   }
-//               }
-//           }else{
-//                sec = Math.floor(x);
-//                sec = sec <10 ? '0'+sec:sec;
-//            }
-//       } 
-  
-//       get_sec (currentTime,sec);
-  
-//       // change currentTime DOM
-//       currTime.innerHTML = min +':'+ sec;
-  
-//       // define minutes duration
-//       let min_d = (isNaN(duration) === true)? '0':
-//           Math.floor(duration/60);
-//        min_d = min_d <10 ? '0'+min_d:min_d;
-  
-  
-//        function get_sec_d (x) {
-//           if(Math.floor(x) >= 60){
-              
-//               for (var i = 1; i<=60; i++){
-//                   if(Math.floor(x)>=(60*i) && Math.floor(x)<(60*(i+1))) {
-//                       sec_d = Math.floor(x) - (60*i);
-//                       sec_d = sec_d <10 ? '0'+sec_d:sec_d;
-//                   }
-//               }
-//           }else{
-//                sec_d = (isNaN(duration) === true)? '0':
-//                Math.floor(x);
-//                sec_d = sec_d <10 ? '0'+sec_d:sec_d;
-//            }
-//       } 
-  
-//       // define seconds duration
-      
-//       get_sec_d (duration);
-  
-//       // change duration DOM
-//       durTime.innerHTML = min_d +':'+ sec_d;
-          
-//   };
 
 playBtn.addEventListener('click', () => {
     const isPlaying = musicContainer.classList.contains('play');
