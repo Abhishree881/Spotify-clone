@@ -124,7 +124,10 @@ for(let i = 0;i<4;i++)
 {
     btns[i] = document.getElementById(Id1[i]);
     btns[i].addEventListener('click',() => {
-        playSong(i);
+        audio.src = `music/${songs[i]}.mp3`;
+        cover.src = `images/${songs[i]}.jpg`;
+        song_name.innerHTML = songs[i];
+        playSong();
     })
 }
 
@@ -140,8 +143,6 @@ function loadSong(song) {
 }
 
 function playSong(song) {
-    loadSong(song);
-
     musicContainer.classList.add('play');
     playBtn.querySelector('i.fas').classList.remove('fa-play');
     playBtn.querySelector('i.fas').classList.add('fa-pause');
@@ -169,8 +170,10 @@ function prevSong() {
     if (songIndex < 0) {
         songIndex = songs.length - 1;
     }
+
+    loadSong(songIndex);
   
-    playSong(songIndex);
+    playSong();
   }
   
 function nextSong() {
@@ -179,8 +182,10 @@ function nextSong() {
     if (songIndex > songs.length - 1) {
         songIndex = 0;
     }
-  
-    playSong(songIndex);
+    
+    loadSong(songIndex);
+
+    playSong();
   }
 
 //------------------------------------------------------------------------
@@ -269,7 +274,7 @@ playBtn.addEventListener('click', () => {
     if (isPlaying) {
       pauseSong();
     } else {
-      playSong(0);
+      playSong();
     }
 });
 
