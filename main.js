@@ -79,3 +79,47 @@ count=0;
 createNew(row_9);
 count=0;
 createNew(row_10);
+
+const musicContainer = document.getElementById('bottom');
+const playBtn = document.getElementById('playsong');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+const audio = document.getElementById('audio');
+
+// Song titles
+const songs = ['Faded','On My Way','Darkside','The Spectre'];
+
+// Keep track of song
+let songIndex = 0;
+
+loadSong(songs[songIndex]);
+
+function loadSong(song) {
+  audio.src = `music/${song}.mp3`;
+}
+
+function playSong() {
+  musicContainer.classList.add('play');
+  playBtn.querySelector('i.fas').classList.remove('fa-play');
+  playBtn.querySelector('i.fas').classList.add('fa-pause');
+
+  audio.play();
+}
+
+function pauseSong() {
+  musicContainer.classList.remove('play');
+  playBtn.querySelector('i.fas').classList.add('fa-play');
+  playBtn.querySelector('i.fas').classList.remove('fa-pause');
+
+  audio.pause();
+}
+
+playBtn.addEventListener('click', () => {
+    const isPlaying = musicContainer.classList.contains('play');
+  
+    if (isPlaying) {
+      pauseSong();
+    } else {
+      playSong();
+    }
+  });
