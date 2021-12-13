@@ -90,9 +90,9 @@ const songs = ['On My Way','Darkside','The Spectre','Faded'];
 // Changing the tiles
 for(let i=0;i<4;i++)
 {
-  row_1.childNodes[i].setAttribute("id",Id1[i]);
-  row_1.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i]}.jpg`);
-  row_1.children[i].children[1].innerHTML = songs[i];
+    row_1.childNodes[i].setAttribute("id",Id1[i]);
+    row_1.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i]}.jpg`);
+    row_1.children[i].children[1].innerHTML = songs[i];
 }
 //--------------------------------------------------------------
 
@@ -112,13 +112,11 @@ const btns = ["btn11","btn12","btn13","btn14"]
 
 for(let i = 0;i<4;i++)
 {
-  btns[i] = document.getElementById(Id1[i]);
-  btns[i].addEventListener('click',() => {
-    playSong(i);
-})
+    btns[i] = document.getElementById(Id1[i]);
+    btns[i].addEventListener('click',() => {
+        playSong(i);
+    })
 }
-
-
 
 // Keep track of song
 let songIndex = 0;
@@ -126,66 +124,66 @@ let songIndex = 0;
 loadSong(songIndex);
 
 function loadSong(song) {
-  audio.src = `music/${songs[song]}.mp3`;
-  cover.src = `images/${songs[song]}.jpg`;
-  song_name.innerHTML = songs[song];
+    audio.src = `music/${songs[song]}.mp3`;
+    cover.src = `images/${songs[song]}.jpg`;
+    song_name.innerHTML = songs[song];
 }
 
 function playSong(song) {
-  loadSong(song);
+    loadSong(song);
 
-  musicContainer.classList.add('play');
-  playBtn.querySelector('i.fas').classList.remove('fa-play');
-  playBtn.querySelector('i.fas').classList.add('fa-pause');
+    musicContainer.classList.add('play');
+    playBtn.querySelector('i.fas').classList.remove('fa-play');
+    playBtn.querySelector('i.fas').classList.add('fa-pause');
 
-  audio.play();
+    audio.play();
 }
 
 function pauseSong() {
-  musicContainer.classList.remove('play');
-  playBtn.querySelector('i.fas').classList.add('fa-play');
-  playBtn.querySelector('i.fas').classList.remove('fa-pause');
+    musicContainer.classList.remove('play');
+    playBtn.querySelector('i.fas').classList.add('fa-play');
+    playBtn.querySelector('i.fas').classList.remove('fa-pause');
 
-  audio.pause();
+    audio.pause();
 }
 
 function prevSong() {
     songIndex--;
   
     if (songIndex < 0) {
-      songIndex = songs.length - 1;
+        songIndex = songs.length - 1;
     }
   
     playSong(songIndex);
   }
   
-  function nextSong() {
+function nextSong() {
     songIndex++;
   
     if (songIndex > songs.length - 1) {
-      songIndex = 0;
+        songIndex = 0;
     }
   
     playSong(songIndex);
   }
 
 //------------------------------------------------------------------------
-  function updateProgress(e) {
+function updateProgress(e) {
     const { duration, currentTime } = e.srcElement;
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
-  }
+}
   
-  // Set progress bar
-  function setProgress(e) {
+// Set progress bar
+function setProgress(e) {
     const width = this.clientWidth;
     const clickX = e.offsetX;
     const duration = audio.duration;
   
     audio.currentTime = (clickX / width) * duration;
-  }
+}
   
-
+// Play button controls
 playBtn.addEventListener('click', () => {
     const isPlaying = musicContainer.classList.contains('play');
   
@@ -194,11 +192,16 @@ playBtn.addEventListener('click', () => {
     } else {
       playSong();
     }
-  });
-  
-  prevBtn.addEventListener('click', prevSong);
-  nextBtn.addEventListener('click', nextSong);
-  audio.addEventListener('timeupdate', updateProgress);
+});
+
+//  Click on prev button 
+prevBtn.addEventListener('click', prevSong);
+
+// Click on next button
+nextBtn.addEventListener('click', nextSong);
+
+// Update timeline
+audio.addEventListener('timeupdate', updateProgress);
 
 // Click on progress bar
 progressContainer.addEventListener('click', setProgress);
