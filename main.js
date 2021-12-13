@@ -182,7 +182,7 @@ function setProgress(e) {
   
     audio.currentTime = (clickX / width) * duration;
 }
-  
+
 // Play button controls
 playBtn.addEventListener('click', () => {
     const isPlaying = musicContainer.classList.contains('play');
@@ -190,7 +190,7 @@ playBtn.addEventListener('click', () => {
     if (isPlaying) {
       pauseSong();
     } else {
-      playSong();
+      playSong(0);
     }
 });
 
