@@ -11,7 +11,7 @@ const row_7 = document.getElementById("row-7");
 const row_8 = document.getElementById("row-8");
 const row_9 = document.getElementById("row-9");
 const row_10 = document.getElementById("row-10");
-const song_name = document.getElementById("songname");
+
 //-----------------------------------------------------------
 function createTopNew(row)
 {
@@ -102,11 +102,21 @@ const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 const audio = document.getElementById('audio');
 const cover = document.getElementById('playImg');
+const playlist = document.getElementById('playlist');
+const song_name = document.getElementById("songname");
 const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
 const currTime = document.getElementById('currTime');
 const durTime = document.getElementById('durTime');
 const btns = ["btn11","btn12","btn13","btn14"];
+
+//----------------------------------------------------------------
+
+cover.style = "opacity: 0;";
+song_name.style = "opacity: 0;";
+currTime.style = "opacity: 0;";
+durTime.style = "opacity: 0;";
+progressContainer.style = "opacity : 0"
 
 //----------------------------------------------------------------
 
@@ -135,6 +145,12 @@ function playSong(song) {
     musicContainer.classList.add('play');
     playBtn.querySelector('i.fas').classList.remove('fa-play');
     playBtn.querySelector('i.fas').classList.add('fa-pause');
+
+    cover.style = "opacity: 1;";
+    song_name.style = "opacity: 1;";
+    currTime.style = "opacity: 1;";
+    durTime.style = "opacity: 1;";
+    progressContainer.style = "opacity : 1"
 
     audio.play();
 }
@@ -179,9 +195,8 @@ function setProgress(e) {
     const width = this.clientWidth;
     const clickX = e.offsetX;
     const duration = audio.duration;
-    //durTime.innerHTML = duration;
+
     audio.currentTime = (clickX / width) * duration;
-    //currTime.innerHTML = currentTime;
 }
 
 //set time counter
