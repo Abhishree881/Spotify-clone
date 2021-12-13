@@ -175,6 +175,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     margin:1%;
+    flex-basis: 23%;
 }
 .img2{
     transition: .4s;
@@ -331,7 +332,7 @@ header{
 }
 .songname{
     position: absolute;
-    right:7%;
+    left:87%;
     color: white;
 }
 .playlist{
