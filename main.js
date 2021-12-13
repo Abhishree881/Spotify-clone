@@ -104,9 +104,9 @@ const audio = document.getElementById('audio');
 const cover = document.getElementById('playImg');
 const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
-const currTime = document.querySelector('#currTime');
-const durTime = document.querySelector('#durTime');
-const btns = ["btn11","btn12","btn13","btn14"]
+const currTime = document.getElementById('currTime');
+const durTime = document.getElementById('durTime');
+const btns = ["btn11","btn12","btn13","btn14"];
 
 //----------------------------------------------------------------
 
@@ -179,10 +179,12 @@ function setProgress(e) {
     const width = this.clientWidth;
     const clickX = e.offsetX;
     const duration = audio.duration;
-  
+    //durTime.innerHTML = duration;
     audio.currentTime = (clickX / width) * duration;
+    //currTime.innerHTML = currentTime;
 }
 
+//----------------------------------------------------------------------------
 // Play button controls
 playBtn.addEventListener('click', () => {
     const isPlaying = musicContainer.classList.contains('play');

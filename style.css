@@ -362,6 +362,17 @@ header{
     transition: width 0.1s linear;
     border-radius: 20px;
 }
+.timer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+#currTime,#durTime{
+    padding: 5px;
+    font-size: 12px;
+}
 @media (max-width:1150px){
     .ul span{
           display:none;
