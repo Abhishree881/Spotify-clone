@@ -114,7 +114,7 @@ for(let i = 0;i<4;i++)
 {
   btns[i] = document.getElementById(Id1[i]);
   btns[i].addEventListener('click',() => {
-    playSong();
+    playSong(i);
 })
 }
 
@@ -123,15 +123,17 @@ for(let i = 0;i<4;i++)
 // Keep track of song
 let songIndex = 0;
 
-loadSong(songs[songIndex]);
+loadSong(songIndex);
 
 function loadSong(song) {
-  audio.src = `music/${song}.mp3`;
-  cover.src = `images/${song}.jpg`;
-  song_name.innerHTML = song;
+  audio.src = `music/${songs[song]}.mp3`;
+  cover.src = `images/${songs[song]}.jpg`;
+  song_name.innerHTML = songs[song];
 }
 
-function playSong() {
+function playSong(song) {
+  loadSong(song);
+
   musicContainer.classList.add('play');
   playBtn.querySelector('i.fas').classList.remove('fa-play');
   playBtn.querySelector('i.fas').classList.add('fa-pause');
@@ -154,9 +156,7 @@ function prevSong() {
       songIndex = songs.length - 1;
     }
   
-    loadSong(songs[songIndex]);
-  
-    playSong();
+    playSong(songIndex);
   }
   
   function nextSong() {
@@ -166,10 +166,10 @@ function prevSong() {
       songIndex = 0;
     }
   
-    loadSong(songs[songIndex]);
-  
-    playSong();
+    playSong(songIndex);
   }
+
+//------------------------------------------------------------------------
   function updateProgress(e) {
     const { duration, currentTime } = e.srcElement;
     const progressPercent = (currentTime / duration) * 100;
