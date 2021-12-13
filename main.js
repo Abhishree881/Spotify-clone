@@ -11,6 +11,7 @@ const row_7 = document.getElementById("row-7");
 const row_8 = document.getElementById("row-8");
 const row_9 = document.getElementById("row-9");
 const row_10 = document.getElementById("row-10");
+
 function createTopNew(row)
 {
     const newDiv = document.createElement('div');
@@ -40,7 +41,7 @@ function createNew(row)
                             <img src="https://rfmsomnii.com/wp-content/uploads/2020/02/Optimized-AW_AVIATION_11-CLEAN.jpg" class="i001">
                         </span>
                         <span class="img2">
-                            <img src="play.png" class="i002">
+                            <img src="play.png" class="i002" >
                         </span>
                     </div>
                     <div class="artist">
@@ -80,11 +81,29 @@ createNew(row_9);
 count=0;
 createNew(row_10);
 
+const Ids = ['imgbtn11','imgbtn12','imgbtn13','imgbtn14'];
+for(let i=0;i<4;i++)
+{
+  row_1.childNodes[i].setAttribute("id",Ids[i]);
+}
+
+
+
 const musicContainer = document.getElementById('bottom');
 const playBtn = document.getElementById('playsong');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 const audio = document.getElementById('audio');
+
+const btns = ["btn11","btn12","btn13","btn14"]
+for(let i = 0;i<4;i++)
+{
+  btns[i] = document.getElementById(Ids[i]);
+  btns[i].addEventListener('click',() => {
+    playSong();
+})
+}
+
 
 // Song titles
 const songs = ['Faded','On My Way','Darkside','The Spectre'];
@@ -147,5 +166,6 @@ playBtn.addEventListener('click', () => {
       playSong();
     }
   });
+  
   prevBtn.addEventListener('click', prevSong);
   nextBtn.addEventListener('click', nextSong);
