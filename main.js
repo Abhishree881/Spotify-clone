@@ -43,13 +43,10 @@ function createNew(row)
                         <span class="img2">
                             <img src="play.png" class="i002" >
                         </span>
-                    </div>
-                    <div class="artist">
-                        Alan Walker
-                    </div>
-                    <div class="other">
-                        tag 1,tag2,tag3
-                    </div>`
+                        </div>
+                        <div class="artist">
+                            Alan Walker
+                        </div>`
     row.appendChild(newDiv);
     count++;
     if (count<4)
@@ -82,12 +79,15 @@ count=0;
 createNew(row_10);
 
 const Ids = ['imgbtn11','imgbtn12','imgbtn13','imgbtn14'];
+// Song titles
+const songs = ['Faded','On My Way','Darkside','The Spectre'];
+
 for(let i=0;i<4;i++)
 {
   row_1.childNodes[i].setAttribute("id",Ids[i]);
+  row_1.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i]}.jpg`);
+  row_1.children[i].children[1].innerHTML = songs[i];
 }
-
-console.log(row_4.childNodes);
 
 const musicContainer = document.getElementById('bottom');
 const playBtn = document.getElementById('playsong');
@@ -109,8 +109,6 @@ for(let i = 0;i<4;i++)
 }
 
 
-// Song titles
-const songs = ['Faded','On My Way','Darkside','The Spectre'];
 
 // Keep track of song
 let songIndex = 0;
@@ -258,6 +256,3 @@ progressContainer.addEventListener('click', setProgress);
 
 // Song ends
 audio.addEventListener('ended', nextSong);
-
-// Time of song
-audio.addEventListener('timeupdate',DurTime);
