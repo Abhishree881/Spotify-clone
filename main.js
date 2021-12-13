@@ -11,6 +11,7 @@ const row_7 = document.getElementById("row-7");
 const row_8 = document.getElementById("row-8");
 const row_9 = document.getElementById("row-9");
 const row_10 = document.getElementById("row-10");
+const song_name = document.getElementById("songname");
 //-----------------------------------------------------------
 function createTopNew(row)
 {
@@ -82,14 +83,14 @@ createNew(row_10);
 //------------------------------------------------------
 
 // Song Ids 
-const Ids = ['imgbtn11','imgbtn12','imgbtn13','imgbtn14'];
+const Id1 = ['imgbtn11','imgbtn12','imgbtn13','imgbtn14'];
 // Song titles
 const songs = ['Faded','On My Way','Darkside','The Spectre'];
 
 // Changing the tiles
 for(let i=0;i<4;i++)
 {
-  row_1.childNodes[i].setAttribute("id",Ids[i]);
+  row_1.childNodes[i].setAttribute("id",Id1[i]);
   row_1.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i]}.jpg`);
   row_1.children[i].children[1].innerHTML = songs[i];
 }
@@ -106,9 +107,12 @@ const progressContainer = document.getElementById('progress-container');
 const currTime = document.querySelector('#currTime');
 const durTime = document.querySelector('#durTime');
 const btns = ["btn11","btn12","btn13","btn14"]
+
+//----------------------------------------------------------------
+
 for(let i = 0;i<4;i++)
 {
-  btns[i] = document.getElementById(Ids[i]);
+  btns[i] = document.getElementById(Id1[i]);
   btns[i].addEventListener('click',() => {
     playSong();
 })
@@ -124,6 +128,7 @@ loadSong(songs[songIndex]);
 function loadSong(song) {
   audio.src = `music/${song}.mp3`;
   cover.src = `images/${song}.jpg`;
+  song_name.innerHTML = song;
 }
 
 function playSong() {
