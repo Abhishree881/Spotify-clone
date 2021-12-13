@@ -94,7 +94,7 @@ const playBtn = document.getElementById('playsong');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 const audio = document.getElementById('audio');
-
+const cover = document.getElementById('playImg');
 const btns = ["btn11","btn12","btn13","btn14"]
 for(let i = 0;i<4;i++)
 {
@@ -115,6 +115,7 @@ loadSong(songs[songIndex]);
 
 function loadSong(song) {
   audio.src = `music/${song}.mp3`;
+  cover.src = `images/${song}.jpg`;
 }
 
 function playSong() {
