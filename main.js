@@ -109,6 +109,7 @@ const progressContainer = document.getElementById('progress-container');
 const currTime = document.getElementById('currTime');
 const durTime = document.getElementById('durTime');
 const btns = ["btn11","btn12","btn13","btn14"];
+const vol = document.getElementById('volume');
 
 //----------------------------------------------------------------
 
@@ -290,3 +291,7 @@ audio.addEventListener('ended', nextSong);
 
 // Time of song
 audio.addEventListener('timeupdate',DurTime);
+
+vol.addEventListener('change',function(e){
+  audio.volume = e.currentTarget.value/100;
+});
