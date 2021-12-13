@@ -87,7 +87,7 @@ for(let i=0;i<4;i++)
   row_1.childNodes[i].setAttribute("id",Ids[i]);
 }
 
-
+console.log(row_4.childNodes);
 
 const musicContainer = document.getElementById('bottom');
 const playBtn = document.getElementById('playsong');
