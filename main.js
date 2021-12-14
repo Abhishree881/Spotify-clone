@@ -85,7 +85,7 @@ createNew(row_10);
 // Song Ids 
 const Id1 = ['imgbtn11','imgbtn12','imgbtn13','imgbtn14'];
 // Song titles
-const songs = ['On My Way','Darkside','The Spectre','Faded'];
+const songs = ['On My Way','Perfect','The Spectre','Faded'];
 
 // Changing the tiles
 for(let i=0;i<4;i++)

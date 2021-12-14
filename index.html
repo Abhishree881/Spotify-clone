@@ -10,7 +10,7 @@
 <body>
     <div class="main">
         <div class="nav">
-            <div class="font"><i style="color:rgb(54, 231, 54);padding:10px;" class="fab fa-spotify fa-3x"></i>&nbsp;<span class="span">SPOTIFY</span></div> 
+            <div class="font"><i style="color:rgb(54, 231, 54);padding:10px;" class="fab fa-spotify fa-3x"></i>&nbsp;<span class="span">Spotify</span></div> 
             <div class="ul"><h4>
                 <div class="nav1"><i class="fas fa-home"></i>&nbsp;&nbsp;&nbsp;<span>Home</span></div><br>
                 <div class="nav2"><i class="fas fa-search"></i>&nbsp;&nbsp;&nbsp;<span>Search</span></div><br>
@@ -90,9 +90,10 @@
             <div class="progress-container" id="progress-container">
                 <div class="progress" id="progress"></div>
             </div>
-            
             <div id="durTime">0:00</div>
-            <input class="vol" id="volume" type="range"></input>
+            <div class="voldiv">
+                <i class="fa fa-volume-up" style="font-size:12px"></i><input class="vol" id="volume" type="range"></input>
+            </div>
         </div>
         <audio src="music/MemeSongs.mp3" id="audio"></audio>
     </div>

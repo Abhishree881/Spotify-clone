@@ -294,6 +294,7 @@ header{
 }
 .fa-facebook {
     color: wheat;
+    cursor: wait;
 }
 .button:hover{
     border: solid white;
@@ -374,10 +375,17 @@ header{
     padding: 5px;
     font-size: 12px;
 }
+.voldiv{
+    position: absolute;
+    left: 0;
+    margin-left: 1.7%;
+}
 .vol{
     position: absolute;
-    height: 4px;
-    left: 1%;
+    height: 2px;
+    bottom: 30%;
+    width: 95px;
+    margin-left: 15px;
     cursor: pointer;
 }
 .vol::-webkit-slider-thumb{
