@@ -146,7 +146,9 @@ const currTime = document.getElementById('currTime');
 const durTime = document.getElementById('durTime');
 const vol = document.getElementById('volume');
 const vol_div = document.getElementById('voldiv');
-const btns = ["btn11","btn12","btn13","btn14"];
+//----------------------------------------------------------------
+
+const btns = ["btn11","btn12","btn13","btn14","btn21","btn22","btn23","btn24","btn31","btn32","btn33","btn34","btn41","btn42","btn43","btn44","btn51","btn52","btn53","btn54","btn61","btn62","btn63","btn64","btn71","btn72","btn73","btn74","btn81","btn82","btn83","btn84","btn91","btn92","btn93","btn94","btn101","btn102","btn103","btn104"];
 
 //----------------------------------------------------------------
 
