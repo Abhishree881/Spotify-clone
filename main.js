@@ -108,13 +108,16 @@ const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
 const currTime = document.getElementById('currTime');
 const durTime = document.getElementById('durTime');
-const btns = ["btn11","btn12","btn13","btn14"];
 const vol = document.getElementById('volume');
+const vol_div = document.getElementById('voldiv');
+const btns = ["btn11","btn12","btn13","btn14"];
 
 //----------------------------------------------------------------
 
 cover.style = "opacity: 0;";
 song_name.style = "opacity: 0;";
+vol_div.style = "opacity: 0;";
+
 
 //----------------------------------------------------------------
 
@@ -147,6 +150,7 @@ function playSong(song) {
 
     cover.style = "opacity: 1;";
     song_name.style = "opacity: 1;";
+    vol_div.style = "opacity: 1;";
 
     audio.play();
 }
