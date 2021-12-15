@@ -164,28 +164,50 @@ function pauseSong() {
 }
 
 function prevSong() {
-    songIndex--;
-  
-    if (songIndex < 0) {
-        songIndex = songs.length - 1;
+    var src = audio.getAttribute('src');
+    var a=0;
+
+    for(let i=0;i<songs.length;i++)
+    {
+        if(src==`music/${songs[i]}.mp3`)
+        {
+            a=i;
+        }
     }
 
-    loadSong(songIndex);
+    a--;
+
+    if (a < 0) {
+            a = songs.length - 1;
+    }
+
+    loadSong(a);
   
     playSong();
-  }
-  
+}
+
 function nextSong() {
-    songIndex++;
-  
-    if (songIndex > songs.length - 1) {
-        songIndex = 0;
+    var src = audio.getAttribute('src');
+    var a=0;
+
+    for(let i=0;i<songs.length;i++)
+    {
+        if(src==`music/${songs[i]}.mp3`)
+        {
+            a=i;
+        }
     }
-    
-    loadSong(songIndex);
+
+    a++;
+
+    if (a > songs.length - 1) {
+             a = 0;
+    }
+
+    loadSong(a);
 
     playSong();
-  }
+}
 
 //------------------------------------------------------------------------
 function updateProgress(e) {
