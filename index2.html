@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Dummy Spotify - Your favourite music is here</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo1.png" alt="Spotify">Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+            <li id="listName">My Mix Playlist</li>
+        </ul>
+        <!-- <div class="listName">MY MIX PLAYLIST</div> -->
+    </nav>
+    <div class="container" id="list" onscroll="myFunction()">
+        <div class="songList">
+            <div class="blank"> 
+
+
+                 </div>
+            <!-- <div class="heading">
+                <h1>Best of NCS - No Copyright Sounds</h1>
+            </div> -->
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Embarcadero</span>
+                    <span class="songListPlay"><span class="timestamp">5:34<span><i id="1"
+                                    class="songItemPlay fas fa-circle"></i></span></span>
+                    </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Piano Concerto</span>
+                    <span class="songListPlay"><span class="timestamp">4:29<span><i id="2"
+                                    class="songItemPlay fas fa-circle"></i></span></span>
+                    </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Struggler</span>
+                    <span class="songListPlay"><span class="timestamp">3:15<span><i id="3"
+                                    class="songItemPlay fas fa-circle"></i></span></span>
+                    </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Something just like this</span>
+                    <span class="songListPlay"><span class="timestamp">4:45<span><i id="4"
+                                    class="songItemPlay fas fa-circle"></i></span></i></span>
+                    </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Tagger</span>
+                    <span class="songListPlay"><span class="timestamp">3:29<span><i id="5"
+                                    class="songItemPlay fas fa-circle"></i></span></span>
+                    </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Embarcadero</span>
+                    <span class="songListPlay"><span class="timestamp">5:34<span><i id="6"
+                                    class="songItemPlay fas fa-circle"></i></span></span>
+                    </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Piano Concerto</span>
+                    <span class="songListPlay"><span class="timestamp">4:29<span><i id="7"
+                                    class="songItemPlay fas fa-circle"></i></span></span>
+                    </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Struggler</span>
+                    <span class="songListPlay"><span class="timestamp">3:15<span><i id="8"
+                                    class="songItemPlay fas fa-circle"></i></span><span></span>
+                        </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Something just like this</span>
+                    <span class="songListPlay"><span class="timestamp">4:45<span><i id="9"
+                                    class="songItemPlay fas fa-circle"></i></span></span>
+                    </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Tagger</span>
+                    <span class="songListPlay"><span class="timestamp">3:29<span><i id="10"
+                                    class="songItemPlay fas fa-circle"></i></span></span>
+                    </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Embarcadero</span>
+                    <span class="songListPlay"><span class="timestamp">5:34<span><i id="11"
+                                    class="songItemPlay fas fa-circle"></i></span></span>
+                    </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Piano Concerto</span>
+                    <span class="songListPlay"><span class="timestamp">4:29<span><i id="12"
+                                class="songItemPlay fas fa-circle"></i></span>
+                    </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Struggler</span>
+                    <span class="songListPlay"><span class="timestamp">3:15<span><i id="13"
+                                    class="songItemPlay fas fa-circle"></i></span></span>
+                    </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Something just like this</span>
+                    <span class="songListPlay"><span class="timestamp">4:45<span><i id="14"
+                                    class="songItemPlay fas fa-circle"></i></span></span>
+                    </span></span>
+                </div>
+                <div class="songItem">
+                    <img class="covers" alt="1">
+                    <span class="songName">Tagger</span>
+                    <span class="songListPlay"><span class="timestamp">3:29<span><i id="15"
+                                class="songItemPlay fas fa-circle"></i></span>
+                    </span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" max="100" value="0">
+        <div class="icons">
+            <i class="fas fa-3x fa-backward" id="previous"></i>
+            <i class="fas fa-3x fa-play-circle" id="masterPlay"></i>
+            <i class="next fas fa-3x fa-forward" id="next"></i>
+        </div>
+        <div class="songInfo">
+            <img src="playing.gif" width="60px" alt="" id="gif"><span id="masterSongName">Embarcadero</span>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/57ce653854.js" crossorigin="anonymous"></script>
+    <script src="script2.js"></script>
+    <script>
+        // var list = document.getElementById("list");
+        // var upArrow = document.getElementById("upArrow");
+        // var downArrow = document.getElementById("downArrow");
+        // var x = 0;
+        // upArrow.onclick = function () {
+        //     console.log("upArrow Initiated");
+        //     x = x - 300;
+        //     list.style.top = x + "px";
+        // }
+        // downArrow.onclick = function () {
+        //     console.log("downArrow Initiated");
+        //     x = x + 300;
+        //     list.style.top = x + "px";
+        // }
+        function myFunction() {
+            var elmnt = document.getElementById("list");
+            var x = elmnt.scrollLeft;
+            var y = elmnt.scrollTop;
+        }
+
+    </script>
+</body>
+
+</html>
