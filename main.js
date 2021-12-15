@@ -96,39 +96,39 @@ for(let i=0;i<4;i++)
     //-----------------------------------------------------------------
     row_2.childNodes[i].setAttribute("id",Id1[i+4]);
     row_2.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i+4]}.jpg`);
-    row_2.children[i].children[1].innerHTML = songs[i];
+    row_2.children[i].children[1].innerHTML = songs[i+4];
     //-----------------------------------------------------------------
     row_3.childNodes[i].setAttribute("id",Id1[i+8]);
     row_3.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i]}.jpg`);
     row_3.children[i].children[1].innerHTML = songs[i];
     //-----------------------------------------------------------------
     row_4.childNodes[i].setAttribute("id",Id1[i+12]);
-    row_4.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i]}.jpg`);
-    row_4.children[i].children[1].innerHTML = songs[i];
+    row_4.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i+4]}.jpg`);
+    row_4.children[i].children[1].innerHTML = songs[i+4];
     //-----------------------------------------------------------------
     row_5.childNodes[i].setAttribute("id",Id1[i+16]);
     row_5.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i]}.jpg`);
     row_5.children[i].children[1].innerHTML = songs[i];
     //-----------------------------------------------------------------
     row_6.childNodes[i].setAttribute("id",Id1[i+20]);
-    row_6.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i]}.jpg`);
-    row_6.children[i].children[1].innerHTML = songs[i];
+    row_6.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i+4]}.jpg`);
+    row_6.children[i].children[1].innerHTML = songs[i+4];
     //-----------------------------------------------------------------
     row_7.childNodes[i].setAttribute("id",Id1[i+24]);
     row_7.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i]}.jpg`);
     row_7.children[i].children[1].innerHTML = songs[i];
     //-----------------------------------------------------------------
     row_8.childNodes[i].setAttribute("id",Id1[i+28]);
-    row_8.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i]}.jpg`);
-    row_8.children[i].children[1].innerHTML = songs[i];
+    row_8.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i+4]}.jpg`);
+    row_8.children[i].children[1].innerHTML = songs[i+4];
     //-----------------------------------------------------------------
     row_9.childNodes[i].setAttribute("id",Id1[i+32]);
     row_9.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i]}.jpg`);
     row_9.children[i].children[1].innerHTML = songs[i];
     //-----------------------------------------------------------------
     row_10.childNodes[i].setAttribute("id",Id1[i+36]);
-    row_10.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i]}.jpg`);
-    row_10.children[i].children[1].innerHTML = songs[i];
+    row_10.children[i].children[0].children[0].children[0].setAttribute("src",`images/${songs[i+4]}.jpg`);
+    row_10.children[i].children[1].innerHTML = songs[i+4];
 }
 //--------------------------------------------------------------
 
@@ -159,13 +159,13 @@ vol_div.style = "opacity: 0;";
 
 //----------------------------------------------------------------
 
-for(let i = 0;i<4;i++)
+for(let i = 0;i<40;i++)
 {
     btns[i] = document.getElementById(Id1[i]);
     btns[i].addEventListener('click',() => {
-        audio.src = `music/${songs[i]}.mp3`;
-        cover.src = `images/${songs[i]}.jpg`;
-        song_name.innerHTML = songs[i];
+        audio.src = `music/${songs[i%8]}.mp3`;
+        cover.src = `images/${songs[i%8]}.jpg`;
+        song_name.innerHTML = songs[i%8];
         playSong();
     })
 }
