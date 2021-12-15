@@ -24,7 +24,7 @@ function createTopNew(row)
                             Alan Walker
                         </div>
                         <div class="topimg2">
-                            <img src="play.png" class="topi002">
+                            <img src="images/play.png" class="topi002">
                         </div>`
     row.appendChild(newDiv);
     count++;
@@ -43,7 +43,7 @@ function createNew(row)
                             <img src="https://rfmsomnii.com/wp-content/uploads/2020/02/Optimized-AW_AVIATION_11-CLEAN.jpg" class="i001">
                         </span>
                         <span class="img2">
-                            <img src="play.png" class="i002" >
+                            <img src="images/play.png" class="i002" >
                         </span>
                         </div>
                         <div class="artist">
