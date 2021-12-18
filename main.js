@@ -36,6 +36,8 @@ const currTime = document.getElementById('currTime');
 const durTime = document.getElementById('durTime');
 const vol = document.getElementById('volume');
 const vol_div = document.getElementById('voldiv');
+// Song titles
+const songs = ['On My Way','Perfect','The Spectre','Faded','Darkside','Castle on the Hill','Shape of You','Thinking out Loud','Embarcadero','Piano Concerto','Something Just Like This','Struggler'];
 
 //-----------------------------------------------------------
 function createTopNew(row)
@@ -109,13 +111,17 @@ createNew(row_10);
 
 function PlaylistNew()
 {   
-    for(let i=0;i<12;i++)
+    for(let i=0;i<songs.length;i++)
     {
         const newDiv = document.createElement('div');
         newDiv.classList.add('songItem')
-        newDiv.innerHTML = `<img class="covers" alt="1">
+        newDiv.innerHTML = `<span class="plyimg1">
+                                <img src="images/Faded.jpg" class="plyimg">
+                            </span>
                             <span class="playlistsong">Struggler</span>
-                            <span class="timestamp">3:15</span>`
+                            <span class="plyimg2">
+                                <img src="images/play.png" class="plybtn" >
+                            </span>`
         queue.appendChild(newDiv);
     }
 }
@@ -132,7 +138,7 @@ playlist.addEventListener('click',function(){
     row_8.style = "display : none;"
     row_9.style = "display : none;"
     row_10.style = "display : none;"
-    head_3.style = "display : none;"
+    // head_3.style = "display : none;"
     head_4.style = "display : none;"
     head_5.style = "display : none;"
     head_6.style = "display : none;"
@@ -144,10 +150,44 @@ playlist.addEventListener('click',function(){
 
 //----------------------------------------------------------------------------------
 // Song Ids 
-const Id1 = ['imgbtn11','imgbtn12','imgbtn13','imgbtn14','imgbtn21','imgbtn22','imgbtn23','imgbtn24','imgbtn31','imgbtn32','imgbtn33','imgbtn34','imgbtn41','imgbtn42','imgbtn43','imgbtn44','imgbtn51','imgbtn52','imgbtn53','imgbtn54','imgbtn61','imgbtn62','imgbtn63','imgbtn64','imgbtn71','imgbtn72','imgbtn73','imgbtn74','imgbtn81','imgbtn82','imgbtn83','imgbtn84','imgbtn91','imgbtn92','imgbtn93','imgbtn94','imgbtn101','imgbtn102','imgbtn103','imgbtn104'];
-// Song titles
-const songs = ['On My Way','Perfect','The Spectre','Faded','Darkside','Castle on the Hill','Shape of You','Thinking out Loud','Embarcadero','Piano Concerto','Something Just Like This','Struggler'];
+const Id1 = [];
+var k=0;
+for(let i=1;i<=10;i++)
+{
+    for(let j=1;j<=4;j++)
+    {
+        Id1[k]=`imgbtn${i}${j}`;
+        k++;
+    }
+}
 
+// Buttons
+const btns = [];
+var k=0;
+for(let i=1;i<=10;i++)
+{
+    for(let j=1;j<=4;j++)
+    {
+        btns[k]=`btn${i}${j}`;
+        k++;
+    }
+}
+
+// playlsitsong Ids
+const Id2 = [];
+for(let i=0;i<songs.length;i++)
+{
+    Id2[i]=`playlistbtn${i}`;
+}
+
+// playlist bttns
+const listbtns = [];
+for(let i=0;i<songs.length;i++)
+{
+    listbtns[i]=`listbtn${i}`;
+}
+
+//----------------------------------------------------------------------
 // Changing the tiles
 for(let i=0;i<4;i++)
 {
@@ -192,11 +232,13 @@ for(let i=0;i<4;i++)
     row_10.children[i].children[1].innerHTML = songs[i];
 }
 //--------------------------------------------------------------
-
-
-//----------------------------------------------------------------
-
-const btns = ["btn11","btn12","btn13","btn14","btn21","btn22","btn23","btn24","btn31","btn32","btn33","btn34","btn41","btn42","btn43","btn44","btn51","btn52","btn53","btn54","btn61","btn62","btn63","btn64","btn71","btn72","btn73","btn74","btn81","btn82","btn83","btn84","btn91","btn92","btn93","btn94","btn101","btn102","btn103","btn104"];
+// changing the queue
+for(let i=0;i<songs.length;i++)
+{
+    queue.childNodes[i].setAttribute("id",Id2[i]);
+    queue.childNodes[i].children[0].children[0].setAttribute("src",`/images/${songs[i]}.jpg`);
+    queue.childNodes[i].children[1].innerHTML = songs[i];
+}
 
 //----------------------------------------------------------------
 
@@ -204,6 +246,17 @@ cover.style = "opacity: 0;";
 song_name.style = "opacity: 0;";
 vol_div.style = "opacity: 0;";
 
+//----------------------------------------------------------------
+for(let i = 0;i<songs.length;i++)
+{
+    listbtns[i] = document.getElementById(Id2[i]);
+    listbtns[i].addEventListener('click',() => {
+        audio.src = `music/${songs[i]}.mp3`;
+        cover.src = `images/${songs[i]}.jpg`;
+        song_name.innerHTML = songs[i];
+        playSong();
+    })
+}
 
 //----------------------------------------------------------------
 

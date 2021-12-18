@@ -423,20 +423,46 @@ header{
 .queue{
     display: none;
     width: inherit;
-    background: linear-gradient(rgb(18,18,18), black);
+    background: linear-gradient(rgb(18,18,18), black);;
     position: absolute;
-    top: 0;
+    top: 65px;
 }
 .songItem{
     height: 70px;
-    width: 92%;
+    width: 89%;
     display: flex;
     background-color: rgb(24, 24, 24);
     color: white;
-    margin: 12px 0;
     padding: 2%;
+    margin: 1% 2% 1% 2%;
     justify-content: space-between;
     align-items: center;
     border-radius: 34px;
     cursor: pointer;
 } 
+.songItem:hover{
+    background-color: rgb(48, 49, 48);
+}
+.plyimg1{
+    padding: 0;;
+}
+.plyimg{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.plybtn{
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.plyimg2{
+    opacity: 0;
+    transition: .4s;
+    padding: 10px;
+}
+.songItem:hover .plyimg2{
+    opacity: 1;
+}
