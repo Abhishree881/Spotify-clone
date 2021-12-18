@@ -11,6 +11,31 @@ const row_7 = document.getElementById("row-7");
 const row_8 = document.getElementById("row-8");
 const row_9 = document.getElementById("row-9");
 const row_10 = document.getElementById("row-10");
+const head_1 = document.getElementById("header-1");
+const head_2 = document.getElementById("header-2");
+const head_3 = document.getElementById("header-3");
+const head_4 = document.getElementById("header-4");
+const head_5 = document.getElementById("header-5");
+const head_6 = document.getElementById("header-6");
+const head_7 = document.getElementById("header-7");
+const head_8 = document.getElementById("header-8");
+const head_9 = document.getElementById("header-9");
+const head_10 = document.getElementById("header-10");
+const queue = document.getElementById('queue');
+const musicContainer = document.getElementById('bottom');
+const playBtn = document.getElementById('playsong');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+const audio = document.getElementById('audio');
+const cover = document.getElementById('playImg');
+const playlist = document.getElementById('playlist');
+const song_name = document.getElementById("songname");
+const progress = document.getElementById('progress');
+const progressContainer = document.getElementById('progress-container');
+const currTime = document.getElementById('currTime');
+const durTime = document.getElementById('durTime');
+const vol = document.getElementById('volume');
+const vol_div = document.getElementById('voldiv');
 
 //-----------------------------------------------------------
 function createTopNew(row)
@@ -82,6 +107,41 @@ count=0;
 createNew(row_10);
 //------------------------------------------------------
 
+function PlaylistNew()
+{   
+    for(let i=0;i<12;i++)
+    {
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('songItem')
+        newDiv.innerHTML = `<img class="covers" alt="1">
+                            <span class="songName">Struggler</span>
+                            <span class="songListPlay"><span class="timestamp">3:15</span>
+                            </span>`
+        queue.appendChild(newDiv);
+    }
+}
+PlaylistNew();
+playlist.addEventListener('click',function(){
+    queue.style = "display : flex; flex-direction: column;";
+    row_3.style = "display : none;"
+    row_4.style = "display : none;"
+    row_5.style = "display : none;"
+    row_6.style = "display : none;"
+    row_7.style = "display : none;"
+    row_8.style = "display : none;"
+    row_9.style = "display : none;"
+    row_10.style = "display : none;"
+    head_3.style = "display : none;"
+    head_4.style = "display : none;"
+    head_5.style = "display : none;"
+    head_6.style = "display : none;"
+    head_7.style = "display : none;"
+    head_8.style = "display : none;"
+    head_9.style = "display : none;"
+    head_10.style = "display : none;"
+});
+
+
 // Song Ids 
 const Id1 = ['imgbtn11','imgbtn12','imgbtn13','imgbtn14','imgbtn21','imgbtn22','imgbtn23','imgbtn24','imgbtn31','imgbtn32','imgbtn33','imgbtn34','imgbtn41','imgbtn42','imgbtn43','imgbtn44','imgbtn51','imgbtn52','imgbtn53','imgbtn54','imgbtn61','imgbtn62','imgbtn63','imgbtn64','imgbtn71','imgbtn72','imgbtn73','imgbtn74','imgbtn81','imgbtn82','imgbtn83','imgbtn84','imgbtn91','imgbtn92','imgbtn93','imgbtn94','imgbtn101','imgbtn102','imgbtn103','imgbtn104'];
 // Song titles
@@ -132,20 +192,7 @@ for(let i=0;i<4;i++)
 }
 //--------------------------------------------------------------
 
-const musicContainer = document.getElementById('bottom');
-const playBtn = document.getElementById('playsong');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
-const audio = document.getElementById('audio');
-const cover = document.getElementById('playImg');
-const playlist = document.getElementById('playlist');
-const song_name = document.getElementById("songname");
-const progress = document.getElementById('progress');
-const progressContainer = document.getElementById('progress-container');
-const currTime = document.getElementById('currTime');
-const durTime = document.getElementById('durTime');
-const vol = document.getElementById('volume');
-const vol_div = document.getElementById('voldiv');
+
 //----------------------------------------------------------------
 
 const btns = ["btn11","btn12","btn13","btn14","btn21","btn22","btn23","btn24","btn31","btn32","btn33","btn34","btn41","btn42","btn43","btn44","btn51","btn52","btn53","btn54","btn61","btn62","btn63","btn64","btn71","btn72","btn73","btn74","btn81","btn82","btn83","btn84","btn91","btn92","btn93","btn94","btn101","btn102","btn103","btn104"];
@@ -355,3 +402,4 @@ audio.addEventListener('timeupdate',DurTime);
 vol.addEventListener('change',function(e){
   audio.volume = e.currentTarget.value/100;
 });
+

@@ -14,7 +14,7 @@ body{
     width: 16%;
 }
 .font{
-    color: rgba(245, 245, 245, 0.746);
+    color: white;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -420,3 +420,28 @@ header{
         margin-left:.5%;
     }
 }
+.queue{
+    display: none;
+    /* display: flex;
+    flex-direction: column; */
+    width: inherit;
+    /* padding: 2%; */
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+.songItem{
+    height: 70px;
+    width: inherit;
+    display: flex;
+    /* flex-direction: column; */
+    background-color: rgb(24, 24, 24);
+    /* width: 80%; */
+    color: white;
+    margin: 12px 0;
+    padding: 2%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+    cursor: pointer;
+} 
