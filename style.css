@@ -422,21 +422,16 @@ header{
 }
 .queue{
     display: none;
-    /* display: flex;
-    flex-direction: column; */
     width: inherit;
-    /* padding: 2%; */
-    background-color: black;
+    background: linear-gradient(rgb(18,18,18), black);
     position: absolute;
     top: 0;
 }
 .songItem{
     height: 70px;
-    width: inherit;
+    width: 92%;
     display: flex;
-    /* flex-direction: column; */
     background-color: rgb(24, 24, 24);
-    /* width: 80%; */
     color: white;
     margin: 12px 0;
     padding: 2%;

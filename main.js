@@ -114,13 +114,14 @@ function PlaylistNew()
         const newDiv = document.createElement('div');
         newDiv.classList.add('songItem')
         newDiv.innerHTML = `<img class="covers" alt="1">
-                            <span class="songName">Struggler</span>
-                            <span class="songListPlay"><span class="timestamp">3:15</span>
-                            </span>`
+                            <span class="playlistsong">Struggler</span>
+                            <span class="timestamp">3:15</span>`
         queue.appendChild(newDiv);
     }
 }
+
 PlaylistNew();
+
 playlist.addEventListener('click',function(){
     queue.style = "display : flex; flex-direction: column;";
     row_3.style = "display : none;"
@@ -141,7 +142,7 @@ playlist.addEventListener('click',function(){
     head_10.style = "display : none;"
 });
 
-
+//----------------------------------------------------------------------------------
 // Song Ids 
 const Id1 = ['imgbtn11','imgbtn12','imgbtn13','imgbtn14','imgbtn21','imgbtn22','imgbtn23','imgbtn24','imgbtn31','imgbtn32','imgbtn33','imgbtn34','imgbtn41','imgbtn42','imgbtn43','imgbtn44','imgbtn51','imgbtn52','imgbtn53','imgbtn54','imgbtn61','imgbtn62','imgbtn63','imgbtn64','imgbtn71','imgbtn72','imgbtn73','imgbtn74','imgbtn81','imgbtn82','imgbtn83','imgbtn84','imgbtn91','imgbtn92','imgbtn93','imgbtn94','imgbtn101','imgbtn102','imgbtn103','imgbtn104'];
 // Song titles
